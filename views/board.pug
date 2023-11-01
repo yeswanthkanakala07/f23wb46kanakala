@@ -17,15 +17,15 @@ block content
   else if (cols < 1 || cols > 10)
     p Columns must be in the range 1 to 10
   else
-  table#outer  
-    - for (let i = 0; i < rows; i++)  // Loop for rows
-      tr#middle  
-        - for (let j = 0; j < cols; j++)  // Loop for columns
-          - if (i === j)
-            td= 1
-          - else if (i === j + 1)
-            td= 2
-          - else if (i === j - 1)
-            td= i
-          - else
-            td= 0
+    table#outer  
+      - for (let i = 0; i < rows; i++)  // Loop for rows
+        tr#middle  
+          - for (let j = 0; j < cols; j++)  // Loop for columns
+            - if (i === j)
+              td= 1
+            - else if (i === j + 1)
+              td= 2
+            - else if (i === j - 1)
+              td= i
+            - else
+              td= 0
